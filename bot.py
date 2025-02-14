@@ -14,7 +14,7 @@ async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add(types.KeyboardButton(
         text="Играть в квест",
-        web_app=WebAppInfo(url="https://24kvest.ru/")
+        web_app=WebAppInfo(url="https://ваш-новый-url.ru/")
     ))
     
     await message.answer(
