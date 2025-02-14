@@ -1,6 +1,22 @@
 const tg = window.Telegram.WebApp;
 tg.expand();
 
+// Добавляем в начало файла, после объявления tg
+document.addEventListener('DOMContentLoaded', () => {
+    const splashScreen = document.querySelector('.splash-screen');
+    const gameContainer = document.querySelector('.game-container');
+    const startButton = document.querySelector('.start-game-btn');
+
+    startButton.addEventListener('click', () => {
+        splashScreen.style.animation = 'fadeOut 0.5s ease-out forwards';
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+            gameContainer.style.display = 'flex';
+            renderScene(gameState.currentScene);
+        }, 500);
+    });
+});
+
 const gameState = {
     inventory: [],
     health: 100,

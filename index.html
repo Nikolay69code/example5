@@ -8,7 +8,20 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-    <div class="game-container">
+    <!-- Добавляем заставку -->
+    <div class="splash-screen">
+        <div class="splash-content">
+            <div class="character-container">
+                <img src="images/red-riding-hood.png" alt="Красная Шапочка" class="character-image">
+            </div>
+            <h1 class="splash-title">Приключения Красной Шапочки</h1>
+            <p class="splash-description">Увлекательное путешествие через темный лес</p>
+            <button class="start-game-btn">Начать приключение</button>
+        </div>
+    </div>
+
+    <!-- Основной контейнер игры -->
+    <div class="game-container" style="display: none;">
         <div class="scene" id="current-scene">
             <div class="scene-content">
                 <h2 class="scene-title"></h2>
