@@ -4,7 +4,7 @@ from aiogram.types import WebAppInfo
 from aiogram.utils import executor
 
 # Замените на свой токен
-BOT_TOKEN = 'YOUR_BOT_TOKEN'
+BOT_TOKEN = '7790752914:AAESb7a85mS2qHl7a82RCb7j6bLY4NSBhp8'
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
@@ -14,7 +14,7 @@ async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add(types.KeyboardButton(
         text="Играть в квест",
-        web_app=WebAppInfo(url="https://ваш-новый-url.ru/")
+        web_app=WebAppInfo(url="https://24kvest.ru/")
     ))
     
     await message.answer(
